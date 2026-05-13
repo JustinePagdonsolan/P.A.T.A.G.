@@ -4,24 +4,24 @@
       <div class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
         <nav class="flex items-center gap-3 text-sm">
           <a href="{{ route('landing') }}" class="px-4 py-2 rounded-full bg-white/10">Home</a>
-          <a href="#" class="px-4 py-2 rounded-full bg-white/10">Dashboard</a>
-          <a href="#" class="px-4 py-2 rounded-full bg-white/10">News</a>
+          <a href="{{ route('dashboard') }}" class="px-4 py-2 rounded-full bg-white/10">Dashboard</a>
+          <a href="{{ route('news') }}" class="px-4 py-2 rounded-full bg-white/10">News</a>
           <a href="{{ route('bills.index') }}" class="px-4 py-2 rounded-full bg-white/10">Bills</a>
           <a href="{{ route('officials.index') }}" class="px-4 py-2 rounded-full bg-emerald-500/80 text-white">Officials</a>
         </nav>
         <div class="flex items-center gap-4 text-sm text-white/80">
           <span>Alangilan, Batangas</span>
-          <div class="w-8 h-8 rounded-full bg-white/20"></div>
+          <a href="{{ route('profile.index') }}" class="w-8 h-8 rounded-full bg-white/20 block"></a>
         </div>
       </div>
       <div class="max-w-6xl mx-auto px-6 pb-10">
         <h1 class="text-3xl font-serif text-center">P.A.T.A.G.</h1>
         <p class="text-center text-white/70">Search and explore verified government officials nationwide</p>
-        <div class="mt-6 flex flex-col md:flex-row gap-3 justify-center">
-          <input class="w-full md:w-72 rounded-full px-4 py-3 text-sm text-[#2a1c14]" placeholder="Search Government Official or Keyword" />
-          <input class="w-full md:w-48 rounded-full px-4 py-3 text-sm text-[#2a1c14]" placeholder="Location" />
+        <form class="mt-6 flex flex-col md:flex-row gap-3 justify-center" action="{{ route('officials.index') }}" method="GET">
+          <input class="w-full md:w-72 rounded-full px-4 py-3 text-sm text-[#2a1c14]" placeholder="Search Government Official or Keyword" name="q" />
+          <input class="w-full md:w-48 rounded-full px-4 py-3 text-sm text-[#2a1c14]" placeholder="Location" name="location" />
           <button class="bg-emerald-500 text-white px-6 py-3 rounded-full text-sm font-semibold">Search</button>
-        </div>
+        </form>
       </div>
     </div>
 
@@ -30,7 +30,7 @@
         <div class="rounded-3xl bg-patag-800 text-white p-5">
           <p class="font-semibold">Stay informed</p>
           <p class="text-xs text-white/70 mt-2">On pending and approved laws</p>
-          <button class="mt-4 w-full bg-white/15 px-4 py-2 rounded-full text-xs">View Tracker</button>
+          <a href="{{ route('hub.budget') }}" class="mt-4 w-full bg-white/15 px-4 py-2 rounded-full text-xs inline-flex justify-center">View Tracker</a>
         </div>
         <div class="patag-card rounded-3xl p-5">
           <p class="text-sm font-semibold">Filters</p>
@@ -81,8 +81,8 @@
         <div class="flex items-center justify-between text-xs text-[#7a5e48] mt-6">
           <span>Showing 12 out of 17 officials</span>
           <div class="flex gap-2">
-            <button class="px-3 py-1 rounded-full bg-white shadow">Previous</button>
-            <button class="px-3 py-1 rounded-full bg-white shadow">Next</button>
+            <a href="{{ route('officials.index', ['page' => 1]) }}" class="px-3 py-1 rounded-full bg-white shadow">Previous</a>
+            <a href="{{ route('officials.index', ['page' => 2]) }}" class="px-3 py-1 rounded-full bg-white shadow">Next</a>
           </div>
         </div>
       </main>

@@ -1,17 +1,23 @@
 <x-layouts.app :title="'PATAG | Citizen Details'">
   <div class="min-h-screen patag-gradient flex items-center justify-center px-6 py-16">
     <div class="patag-panel rounded-3xl p-10 w-full max-w-2xl text-white shadow-soft">
-      <button class="text-xs px-3 py-1 rounded-full bg-white/10">Back</button>
+      <a href="{{ route('register.role') }}" class="text-xs px-3 py-1 rounded-full bg-white/10 inline-flex">Back</a>
       <h1 class="text-2xl font-semibold mt-6">Tell us about you</h1>
       <p class="text-sm text-white/70">Help us surface data relevant to your community and sector.</p>
-      <form class="mt-6 space-y-4">
+      <form class="mt-6 space-y-4" action="{{ route('profile.activity') }}" method="GET">
         <div class="grid md:grid-cols-2 gap-4">
-          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Occupational industry" />
-          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Select industry" />
+          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Occupational industry" name="occupational_industry" />
+          <select class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" name="industry">
+            <option value="">Select industry</option>
+            <option value="education">Education</option>
+            <option value="health">Health</option>
+            <option value="agriculture">Agriculture</option>
+            <option value="technology">Technology</option>
+          </select>
         </div>
         <div class="grid md:grid-cols-2 gap-4">
-          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="City / Municipality" />
-          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Province" />
+          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="City / Municipality" name="city_or_municipality" />
+          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Province" name="province" />
         </div>
         <div class="flex flex-wrap gap-4 text-sm text-white/70">
           <span>Are you a registered voter?</span>

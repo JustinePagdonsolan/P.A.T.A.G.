@@ -1,13 +1,16 @@
 <x-layouts.app :title="'PATAG | Journalist Verification'">
   <div class="min-h-screen patag-gradient flex items-center justify-center px-6 py-16">
     <div class="patag-panel rounded-3xl p-10 w-full max-w-2xl text-white shadow-soft">
-      <button class="text-xs px-3 py-1 rounded-full bg-white/10">Back</button>
+      <a href="{{ route('register.role') }}" class="text-xs px-3 py-1 rounded-full bg-white/10 inline-flex">Back</a>
       <h1 class="text-2xl font-semibold mt-6">Verify your credentials</h1>
       <p class="text-sm text-white/70">Optional ID upload unlocks a Verified Badge and advanced research tools.</p>
-      <form class="mt-6 space-y-4">
-        <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Institution / Organization name" />
-        <div class="rounded-xl border border-dashed border-white/30 p-4 text-sm text-white/70">Upload professional or press ID</div>
-        <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Author portfolio or professional profile" />
+      <form class="mt-6 space-y-4" action="{{ route('profile.activity') }}" method="GET">
+        <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Institution / Organization name" name="organization_name" />
+        <label class="rounded-xl border border-dashed border-white/30 p-4 text-sm text-white/70 block cursor-pointer">
+          Upload professional or press ID
+          <input type="file" class="hidden" name="press_id" />
+        </label>
+        <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Author portfolio or professional profile" name="portfolio_url" />
         <p class="text-xs text-white/60">Pending verification. You may access sites in pending status until human reviewers confirm your credentials.</p>
         <label class="flex items-center gap-2 text-xs text-white/70">
           <input type="checkbox" /> I agree to the Terms of Service and Privacy Policy

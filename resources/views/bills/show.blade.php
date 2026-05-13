@@ -1,7 +1,17 @@
 <x-layouts.app :title="'PATAG | Bill Detail'">
   <div class="min-h-screen bg-[#f6f1ec]">
     <div class="patag-gradient text-white">
-      <div class="max-w-6xl mx-auto px-6 py-10">
+      <div class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+        <nav class="flex items-center gap-3 text-sm">
+          <a href="{{ route('landing') }}" class="px-4 py-2 rounded-full bg-white/10">Home</a>
+          <a href="{{ route('dashboard') }}" class="px-4 py-2 rounded-full bg-white/10">Dashboard</a>
+          <a href="{{ route('news') }}" class="px-4 py-2 rounded-full bg-white/10">News</a>
+          <a href="{{ route('bills.index') }}" class="px-4 py-2 rounded-full bg-emerald-500/80 text-white">Bills</a>
+          <a href="{{ route('officials.index') }}" class="px-4 py-2 rounded-full bg-white/10">Officials</a>
+        </nav>
+        <a href="{{ route('profile.index') }}" class="w-8 h-8 rounded-full bg-white/20 block"></a>
+      </div>
+      <div class="max-w-6xl mx-auto px-6 pb-10">
         <a href="{{ route('bills.index') }}" class="text-sm text-white/70">← All Bills</a>
         <div class="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
@@ -12,9 +22,9 @@
             <h1 class="text-3xl font-serif mt-3">Bill Title</h1>
             <p class="text-sm text-white/70">Brief description of the bill.</p>
             <div class="flex gap-2 mt-4">
-              <button class="px-4 py-2 rounded-full bg-white/10 text-xs">Approve</button>
-              <button class="px-4 py-2 rounded-full bg-white/10 text-xs">Disapprove</button>
-              <button class="px-4 py-2 rounded-full bg-white/10 text-xs">Bookmark</button>
+              <a href="{{ route('hub.surveys') }}" class="px-4 py-2 rounded-full bg-white/10 text-xs">Approve</a>
+              <a href="{{ route('hub.surveys') }}" class="px-4 py-2 rounded-full bg-white/10 text-xs">Disapprove</a>
+              <a href="{{ route('profile.activity') }}" class="px-4 py-2 rounded-full bg-white/10 text-xs">Bookmark</a>
             </div>
           </div>
           <div class="text-xs text-white/60">Filed: 2025-01-10</div>
@@ -72,7 +82,7 @@
         <div class="patag-card rounded-3xl p-6">
           <p class="text-xs text-[#7a5e48] uppercase tracking-wide">Take action</p>
           <p class="text-sm text-[#5a4636] mt-3">Tell where you stand and send a templated message to lawmakers handling this bill.</p>
-          <button class="mt-4 w-full bg-patag-700 text-white py-2 rounded-full text-sm">Open Pressure Hub</button>
+          <a href="{{ route('hub.index') }}" class="mt-4 w-full bg-patag-700 text-white py-2 rounded-full text-sm inline-flex justify-center">Open Pressure Hub</a>
         </div>
       </aside>
     </div>
