@@ -8,7 +8,7 @@
         <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Institution / Organization name" name="organization_name" />
         <label class="rounded-xl border border-dashed border-white/30 p-4 text-sm text-white/70 block cursor-pointer">
           Upload professional or press ID
-          <input type="file" class="hidden" />
+          <input type="file" class="hidden" name="press_id" />
         </label>
         <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Author portfolio or professional profile" name="portfolio_url" />
         <p class="text-xs text-white/60">Pending verification. You may access sites in pending status until human reviewers confirm your credentials.</p>

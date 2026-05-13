@@ -18,8 +18,8 @@
         <h1 class="text-3xl font-serif text-center">P.A.T.A.G.</h1>
         <p class="text-center text-white/70">Search and explore verified government officials nationwide</p>
         <form class="mt-6 flex flex-col md:flex-row gap-3 justify-center" action="{{ route('officials.index') }}" method="GET">
-          <input class="w-full md:w-72 rounded-full px-4 py-3 text-sm text-[#2a1c14]" placeholder="Search Government Official or Keyword" aria-label="Search government official or keyword" name="q" />
-          <input class="w-full md:w-48 rounded-full px-4 py-3 text-sm text-[#2a1c14]" placeholder="Location" aria-label="Location" name="location" />
+          <input class="w-full md:w-72 rounded-full px-4 py-3 text-sm text-[#2a1c14]" placeholder="Search Government Official or Keyword" name="q" />
+          <input class="w-full md:w-48 rounded-full px-4 py-3 text-sm text-[#2a1c14]" placeholder="Location" name="location" />
           <button class="bg-emerald-500 text-white px-6 py-3 rounded-full text-sm font-semibold">Search</button>
         </form>
       </div>

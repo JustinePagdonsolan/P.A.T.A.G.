@@ -41,7 +41,7 @@
             <div class="mt-4 text-xs text-[#5b4a3a]">Goal: Secure + fact-check + infos. Reports + trends</div>
           </div>
 
-          <nav class="mt-6 flex flex-wrap gap-3" aria-label="Authentication and quick actions">
+          <nav class="mt-6 flex flex-wrap gap-3" aria-label="Primary account and navigation links">
             <a href="{{ route('login') }}" class="px-5 py-2 rounded-full bg-[#2a1c14] text-white text-xs font-semibold">Login</a>
             <a href="{{ route('register') }}" class="px-5 py-2 rounded-full bg-[#6a4a38] text-white text-xs font-semibold">Create account</a>
             <a href="{{ route('hub.index') }}" class="px-5 py-2 rounded-full bg-[#efe4da] text-[#3d2f24] text-xs font-semibold">Action Hub</a>
