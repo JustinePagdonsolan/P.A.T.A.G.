@@ -4,11 +4,11 @@
       <div class="rounded-[28px] bg-white overflow-hidden shadow-2xl">
         <div class="px-6 py-4 bg-white border-b">
           <div class="flex items-center justify-center">
-            <div class="flex items-center gap-2 rounded-full bg-[#d9c6a4] px-4 py-2 text-xs text-[#3a2c1d] shadow">
+            <a href="{{ route('dashboard') }}" class="flex items-center gap-2 rounded-full bg-[#d9c6a4] px-4 py-2 text-xs text-[#3a2c1d] shadow">
               <span class="inline-block h-2 w-2 rounded-full bg-white"></span>
               <span>Search</span>
               <span class="rounded-full bg-white/80 px-2 py-0.5 text-[10px]">Index</span>
-            </div>
+            </a>
           </div>
         </div>
 
@@ -41,13 +41,19 @@
             <div class="mt-4 text-xs text-[#5b4a3a]">Goal: Secure + fact-check + infos. Reports + trends</div>
           </div>
 
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="{{ route('login') }}" class="px-5 py-2 rounded-full bg-[#2a1c14] text-white text-xs font-semibold">Login</a>
+            <a href="{{ route('register') }}" class="px-5 py-2 rounded-full bg-[#6a4a38] text-white text-xs font-semibold">Create account</a>
+            <a href="{{ route('hub.index') }}" class="px-5 py-2 rounded-full bg-[#efe4da] text-[#3d2f24] text-xs font-semibold">Action Hub</a>
+          </div>
+
           <div class="mt-6">
             <p class="font-serif text-lg text-[#7a4b1e]">Today across the four branches.</p>
             <div class="mt-4 space-y-3">
-              <div class="h-14 rounded-2xl bg-gradient-to-r from-[#7b3f1a] to-[#2d1a0f]"></div>
-              <div class="h-14 rounded-2xl bg-[#6a6d74]"></div>
-              <div class="h-14 rounded-2xl bg-[#cfc9c6]"></div>
-              <div class="h-14 rounded-2xl bg-[#a09085]"></div>
+              <a href="{{ route('officials.index') }}" class="h-14 rounded-2xl bg-gradient-to-r from-[#7b3f1a] to-[#2d1a0f] block"></a>
+              <a href="{{ route('bills.index') }}" class="h-14 rounded-2xl bg-[#6a6d74] block"></a>
+              <a href="{{ route('news') }}" class="h-14 rounded-2xl bg-[#cfc9c6] block"></a>
+              <a href="{{ route('dashboard') }}" class="h-14 rounded-2xl bg-[#a09085] block"></a>
             </div>
           </div>
         </div>
@@ -56,35 +62,35 @@
           <div class="grid grid-cols-5 gap-6 text-xs">
             <div>
               <p class="font-semibold">Nametly</p>
-              <p class="mt-2 text-white/70">Home</p>
-              <p class="text-white/70">Visit</p>
-              <p class="text-white/70">Agenda</p>
-              <p class="text-white/70">Developers</p>
+              <a href="{{ route('landing') }}" class="mt-2 text-white/70 block">Home</a>
+              <a href="{{ route('service') }}" class="text-white/70 block">Service</a>
+              <a href="{{ route('hub.index') }}" class="text-white/70 block">Agenda</a>
+              <a href="{{ route('methodology') }}" class="text-white/70 block">Developers</a>
             </div>
             <div>
               <p class="font-semibold">Platform</p>
-              <p class="mt-2 text-white/70">Individuals</p>
-              <p class="text-white/70">Teams</p>
-              <p class="text-white/70">Investigations</p>
+              <a href="{{ route('profile.activity') }}" class="mt-2 text-white/70 block">Individuals</a>
+              <a href="{{ route('dashboard') }}" class="text-white/70 block">Teams</a>
+              <a href="{{ route('news') }}" class="text-white/70 block">Investigations</a>
             </div>
             <div>
               <p class="font-semibold">Features</p>
-              <p class="mt-2 text-white/70">Case studies</p>
-              <p class="text-white/70">New explorations</p>
-              <p class="text-white/70">Dataverse</p>
-              <p class="text-white/70">Best practices</p>
+              <a href="{{ route('officials.index') }}" class="mt-2 text-white/70 block">Case studies</a>
+              <a href="{{ route('hub.surveys') }}" class="text-white/70 block">New explorations</a>
+              <a href="{{ route('hub.budget') }}" class="text-white/70 block">Dataverse</a>
+              <a href="{{ route('methodology') }}" class="text-white/70 block">Best practices</a>
             </div>
             <div>
               <p class="font-semibold">Learn more</p>
-              <p class="mt-2 text-white/70">FAQ</p>
-              <p class="text-white/70">Case studies</p>
-              <p class="text-white/70">Best practices</p>
+              <a href="{{ route('about') }}" class="mt-2 text-white/70 block">FAQ</a>
+              <a href="{{ route('news') }}" class="text-white/70 block">Case studies</a>
+              <a href="{{ route('methodology') }}" class="text-white/70 block">Best practices</a>
             </div>
             <div>
               <p class="font-semibold">Support</p>
-              <p class="mt-2 text-white/70">Contact</p>
-              <p class="text-white/70">Support</p>
-              <p class="text-white/70">Legal</p>
+              <a href="{{ route('contact') }}" class="mt-2 text-white/70 block">Contact</a>
+              <a href="{{ route('service') }}" class="text-white/70 block">Support</a>
+              <a href="{{ route('profile.privacy') }}" class="text-white/70 block">Legal</a>
             </div>
           </div>
         </div>

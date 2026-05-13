@@ -4,13 +4,14 @@
       <div class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
         <nav class="flex items-center gap-3 text-sm">
           <a href="{{ route('landing') }}" class="px-4 py-2 rounded-full bg-white/10">Home</a>
-          <a href="#" class="px-4 py-2 rounded-full bg-white/10">Dashboard</a>
-          <a href="#" class="px-4 py-2 rounded-full bg-white/10">News</a>
+          <a href="{{ route('dashboard') }}" class="px-4 py-2 rounded-full bg-white/10">Dashboard</a>
+          <a href="{{ route('news') }}" class="px-4 py-2 rounded-full bg-white/10">News</a>
           <a href="{{ route('bills.index') }}" class="px-4 py-2 rounded-full bg-white/10">Bills</a>
+          <a href="{{ route('officials.index') }}" class="px-4 py-2 rounded-full bg-emerald-500/80 text-white">Officials</a>
         </nav>
         <div class="flex items-center gap-4 text-sm text-white/80">
           <span>Alangilan, Batangas</span>
-          <div class="w-8 h-8 rounded-full bg-white/20"></div>
+          <a href="{{ route('profile.index') }}" class="w-8 h-8 rounded-full bg-white/20 block"></a>
         </div>
       </div>
     </div>
@@ -63,12 +64,10 @@
               <li><strong>Birth – 2006:</strong> Heir Apparent to the Gojo Clan</li>
             </ul>
           </div>
-          <div class="patag-card rounded-3xl p-6">
-            <div class="flex items-center justify-between">
-              <h2 class="font-semibold">Position History</h2>
-              <span>▾</span>
-            </div>
-          </div>
+          <a href="{{ route('dashboard') }}" class="patag-card rounded-3xl p-6 flex items-center justify-between">
+            <span class="font-semibold">Position History</span>
+            <span>▾</span>
+          </a>
           <div class="patag-card rounded-3xl p-6">
             <h2 class="font-semibold">Public Records</h2>
             <ul class="mt-3 text-sm text-[#5a4636] space-y-2">
@@ -77,14 +76,14 @@
               <li><strong>Audit Status:</strong> COA report — Perfect Clarity.</li>
             </ul>
           </div>
-          <div class="patag-card rounded-3xl p-6 flex items-center justify-between">
+          <a href="{{ route('news') }}" class="patag-card rounded-3xl p-6 flex items-center justify-between">
             <span class="font-semibold">News and Controversies</span>
             <span>▾</span>
-          </div>
-          <div class="patag-card rounded-3xl p-6 flex items-center justify-between">
+          </a>
+          <a href="{{ route('methodology') }}" class="patag-card rounded-3xl p-6 flex items-center justify-between">
             <span class="font-semibold">Sources and References</span>
             <span>▾</span>
-          </div>
+          </a>
         </div>
       </div>
     </div>

@@ -1,13 +1,13 @@
 <x-layouts.app :title="'PATAG | Research Details'">
   <div class="min-h-screen patag-gradient flex items-center justify-center px-6 py-16">
     <div class="patag-panel rounded-3xl p-10 w-full max-w-2xl text-white shadow-soft">
-      <button class="text-xs px-3 py-1 rounded-full bg-white/10">Back</button>
+      <a href="{{ route('register.role') }}" class="text-xs px-3 py-1 rounded-full bg-white/10 inline-flex">Back</a>
       <h1 class="text-2xl font-semibold mt-6">Research details</h1>
       <p class="text-sm text-white/70">Optional ID upload unlocks a Verified Badge and advanced research tools.</p>
-      <form class="mt-6 space-y-4">
+      <form class="mt-6 space-y-4" action="{{ route('profile.activity') }}" method="GET">
         <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Organization type" />
         <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Institution or organization name" />
-        <div class="rounded-xl border border-dashed border-white/30 p-4 text-sm text-white/70">Click to upload identification card</div>
+        <a href="{{ route('profile.privacy') }}" class="rounded-xl border border-dashed border-white/30 p-4 text-sm text-white/70 block">Click to upload identification card</a>
         <label class="flex items-center gap-2 text-xs text-white/70">
           <input type="checkbox" /> I agree to the Terms of Service and Privacy Policy
         </label>
