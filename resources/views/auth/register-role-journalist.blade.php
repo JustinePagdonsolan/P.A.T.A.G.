@@ -6,7 +6,10 @@
       <p class="text-sm text-white/70">Optional ID upload unlocks a Verified Badge and advanced research tools.</p>
       <form class="mt-6 space-y-4" action="{{ route('profile.activity') }}" method="GET">
         <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Institution / Organization name" />
-        <a href="{{ route('profile.privacy') }}" class="rounded-xl border border-dashed border-white/30 p-4 text-sm text-white/70 block">Upload professional or press ID</a>
+        <label class="rounded-xl border border-dashed border-white/30 p-4 text-sm text-white/70 block cursor-pointer">
+          Upload professional or press ID
+          <input type="file" class="hidden" />
+        </label>
         <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Author portfolio or professional profile" />
         <p class="text-xs text-white/60">Pending verification. You may access sites in pending status until human reviewers confirm your credentials.</p>
         <label class="flex items-center gap-2 text-xs text-white/70">
