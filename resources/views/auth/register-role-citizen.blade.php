@@ -6,12 +6,12 @@
       <p class="text-sm text-white/70">Help us surface data relevant to your community and sector.</p>
       <form class="mt-6 space-y-4" action="{{ route('profile.activity') }}" method="GET">
         <div class="grid md:grid-cols-2 gap-4">
-          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Occupational industry" />
-          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Select industry" />
+          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Occupational industry" name="occupational_industry" />
+          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Select industry" name="selected_industry" />
         </div>
         <div class="grid md:grid-cols-2 gap-4">
-          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="City / Municipality" />
-          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Province" />
+          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="City / Municipality" name="city_or_municipality" />
+          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Province" name="province" />
         </div>
         <div class="flex flex-wrap gap-4 text-sm text-white/70">
           <span>Are you a registered voter?</span>

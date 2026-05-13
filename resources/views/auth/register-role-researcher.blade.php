@@ -5,8 +5,8 @@
       <h1 class="text-2xl font-semibold mt-6">Research details</h1>
       <p class="text-sm text-white/70">Optional ID upload unlocks a Verified Badge and advanced research tools.</p>
       <form class="mt-6 space-y-4" action="{{ route('profile.activity') }}" method="GET">
-        <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Organization type" />
-        <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Institution or organization name" />
+        <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Organization type" name="organization_type" />
+        <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Institution or organization name" name="institution_name" />
         <label class="rounded-xl border border-dashed border-white/30 p-4 text-sm text-white/70 block cursor-pointer">
           Click to upload identification card
           <input type="file" class="hidden" />

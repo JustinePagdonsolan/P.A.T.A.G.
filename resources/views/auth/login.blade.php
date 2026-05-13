@@ -19,11 +19,11 @@
         <form class="mt-8 space-y-4" action="{{ route('dashboard') }}" method="GET">
           <div>
             <label class="text-xs uppercase tracking-wide text-white/60">Email</label>
-            <input class="mt-2 w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Email" />
+            <input class="mt-2 w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Email" name="email" type="email" />
           </div>
           <div>
             <label class="text-xs uppercase tracking-wide text-white/60">Password</label>
-            <input class="mt-2 w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Password" type="password" />
+            <input class="mt-2 w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Password" type="password" name="password" />
           </div>
           <div class="flex items-center justify-between text-xs text-white/70">
             <label class="flex items-center gap-2">

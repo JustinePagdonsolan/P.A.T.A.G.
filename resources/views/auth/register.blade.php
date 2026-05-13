@@ -16,11 +16,11 @@
       <div class="patag-panel rounded-3xl p-10 w-full max-w-md text-white shadow-soft">
         <h1 class="text-2xl font-semibold text-center">Create an account</h1>
         <form class="mt-8 space-y-4" action="{{ route('register.role') }}" method="GET">
-          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Full name" />
-          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Email" />
-          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="MM/DD/YYYY" />
-          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Password" type="password" />
-          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Confirm Password" type="password" />
+          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Full name" name="full_name" />
+          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Email" name="email" type="email" />
+          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="MM/DD/YYYY" name="date_of_birth" />
+          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Password" type="password" name="password" />
+          <input class="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-sm" placeholder="Confirm Password" type="password" name="password_confirmation" />
           <button class="w-full bg-black/40 hover:bg-black/60 text-white py-3 rounded-xl font-semibold">Continue →</button>
           <p class="text-center text-xs text-white/70">Already have an account? <a href="{{ route('login') }}" class="text-white font-semibold">Login</a></p>
         </form>
