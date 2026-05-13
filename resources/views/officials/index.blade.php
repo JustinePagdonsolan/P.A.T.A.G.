@@ -81,8 +81,8 @@
         <div class="flex items-center justify-between text-xs text-[#7a5e48] mt-6">
           <span>Showing 12 out of 17 officials</span>
           <div class="flex gap-2">
-            <a href="{{ route('officials.index') }}" class="px-3 py-1 rounded-full bg-white shadow">Previous</a>
-            <a href="{{ route('officials.show') }}" class="px-3 py-1 rounded-full bg-white shadow">Next</a>
+            <a href="{{ route('officials.index', ['page' => 1]) }}" class="px-3 py-1 rounded-full bg-white shadow">Previous</a>
+            <a href="{{ route('officials.index', ['page' => 2]) }}" class="px-3 py-1 rounded-full bg-white shadow">Next</a>
           </div>
         </div>
       </main>
